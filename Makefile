@@ -31,3 +31,6 @@ mrproper:	clean
 	rm -f $(EXE)
 
 # DO NOT DELETE THIS LINE
+
+PointsArray.o: PointsArray.h Point.h
+Point.o: Point.h
