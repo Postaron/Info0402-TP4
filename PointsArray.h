@@ -2,13 +2,17 @@
 #define POINTSARRAY_H_
 
 #include <cstddef>
+#include <initializer_list>
 
 #include "Point.h"
+#include "Transform.h"
 
-class PointsArray {
+class PointsArray: virtual public Transform {
 public:
 	PointsArray(int size);
 	PointsArray(const PointsArray& p);
+	PointsArray(const std::initializer_list<Point>& list);
+	PointsArray(int n, int c, int s, int r);
 	virtual ~PointsArray();
 	bool empty();
 	int getSize() const;
