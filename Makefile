@@ -35,3 +35,4 @@ mrproper:	clean
 ReallocatablePointsArray.o: ReallocatablePointsArray.h PointsArray.h Point.h
 PointsArray.o: PointsArray.h Point.h
 Point.o: Point.h
+TP4.o: Point.h ReallocatablePointsArray.h PointsArray.h
