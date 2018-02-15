@@ -8,6 +8,7 @@ private:
 public:
 	Point();
 	Point(int x, int y);
+	Point(const Point& p);
 	virtual ~Point();
 	int getX() const;
 	void setX(int x);

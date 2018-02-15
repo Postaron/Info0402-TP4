@@ -1,5 +1,7 @@
 #include "PointsArray.h"
 
+#include <algorithm>
+
 PointsArray::PointsArray(int size = 5) :
 		size(size), nbr_inside(0) {
 	tab = new Point[this->size];
@@ -32,4 +34,19 @@ void PointsArray::pop_back() {
 
 inline Point& PointsArray::operator [](size_t n) const {
 	return tab[n];
+}
+
+PointsArray::PointsArray(const PointsArray& p) {
+	nbr_inside = p.nbr_inside;
+	size = p.size;
+	tab = new Point[size];
+	std::copy(p.tab, p.tab + (p.size - 1), tab);
+}
+
+PointsArray& PointsArray::operator =(const PointsArray& p) {
+	nbr_inside = p.nbr_inside;
+	size = p.size;
+	tab = new Point[size];
+	std::copy(p.tab, p.tab + (p.size - 1), tab);
+	return *this;
 }

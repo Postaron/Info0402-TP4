@@ -8,6 +8,7 @@
 class PointsArray {
 public:
 	PointsArray(int size);
+	PointsArray(const PointsArray& p);
 	virtual ~PointsArray();
 	bool empty();
 	int getSize() const;
@@ -15,6 +16,7 @@ public:
 	void pop_back();
 	inline Point& get(int i) const;
 	inline Point& operator[](size_t n) const;
+	PointsArray& operator=(const PointsArray& p);
 
 protected:
 	int size;

@@ -28,3 +28,7 @@ void Point::setY(int y) {
 Point::~Point() {
 }
 
+Point::Point(const Point& p) {
+	x = p.x;
+	y = p.y;
+}
