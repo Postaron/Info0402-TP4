@@ -32,5 +32,6 @@ mrproper:	clean
 
 # DO NOT DELETE THIS LINE
 
+ReallocatablePointsArray.o: ReallocatablePointsArray.h PointsArray.h Point.h
 PointsArray.o: PointsArray.h Point.h
 Point.o: Point.h

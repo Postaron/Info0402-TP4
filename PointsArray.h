@@ -11,11 +11,12 @@ public:
 	virtual ~PointsArray();
 	bool empty();
 	int getSize() const;
-	Point& get(int i) const;
-	Point& operator[](size_t n);
-	Point& operator[](size_t n) const;
+	virtual void push_back(Point& p);
+	void pop_back();
+	inline Point& get(int i) const;
+	inline Point& operator[](size_t n) const;
 
-private:
+protected:
 	int size;
 	int nbr_inside;
 	Point* tab;

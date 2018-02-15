@@ -17,14 +17,19 @@ int PointsArray::getSize() const {
 	return size;
 }
 
-Point& PointsArray::get(int i) const {
+inline Point& PointsArray::get(int i) const {
 	return tab[i];
 }
 
-Point& PointsArray::operator [](size_t n) {
-	return tab[n];
+void PointsArray::push_back(Point& p) {
+	tab[nbr_inside] = p;
+	++nbr_inside;
 }
 
-Point& PointsArray::operator [](size_t n) const {
+void PointsArray::pop_back() {
+	--nbr_inside;
+}
+
+inline Point& PointsArray::operator [](size_t n) const {
 	return tab[n];
 }
