@@ -33,6 +33,8 @@ mrproper:	clean
 # DO NOT DELETE THIS LINE
 
 ReallocatablePointsArray.o: ReallocatablePointsArray.h PointsArray.h Point.h
-PointsArray.o: PointsArray.h Point.h
+ReallocatablePointsArray.o: Transform.h
+Transform.o: Transform.h
+PointsArray.o: PointsArray.h Point.h Transform.h
 Point.o: Point.h
-TP4.o: Point.h ReallocatablePointsArray.h PointsArray.h
+TP4.o: Point.h ReallocatablePointsArray.h PointsArray.h Transform.h

@@ -14,6 +14,7 @@ public:
 	void setX(int x);
 	int getY() const;
 	void setY(int y);
+	//inline Point& operator=(const Point& p);
 };
 
 #endif /* POINT_H_ */
